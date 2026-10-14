@@ -24,9 +24,9 @@ build/
 venv/
 env/
 
-# Environment variables
-.env
-.env.local
+# Environment variables; only the empty template belongs in the public package.
+.env*
+!.env.example
 
 # Jupyter
 .ipynb_checkpoints/
@@ -46,21 +46,10 @@ Thumbs.db
 *.swp
 *.swo
 
-# Results (optional - may want to commit metrics but not large files)
-results/figures/*.png
-results/figures/*.pdf
-results/reports/*.txt
-results/reports/*.json
-results/pmcardio-reference/operational/
-results/pmcardio-holdout/*/operational/
-results/real-phone*/records/
-results/digitization-experiments/*/operational/
-results/digitization-experiments/*/signals/
-results/digitization-experiments/*/signals-calibrated/
-results/digitization-experiments/*-pilot/
-results/hr-accuracy/model/
-results/hr-accuracy/rhythm-strips/
-results/hr-accuracy/scratch/
+# Keep record-level research exports out of the public distribution.
+/results/
+/.pytest_cache/
+/.ruff_cache/
 
 # Logs
 *.log

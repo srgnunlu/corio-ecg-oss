@@ -8,7 +8,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 EXTERNAL_DIR = PROJECT_ROOT / "external"
 OPEN_ECG_DIGITIZER_PATCH = PROJECT_ROOT / "vendor" / "patches" / "open-ecg-digitizer.patch"
-OPEN_ECG_DIGITIZER_REVISION = "963387ff5abdfa3db91c15ac52d6cf1214345a6a"
+# This revision adds the upstream license without changing executable Python sources.
+OPEN_ECG_DIGITIZER_REVISION = "9e712feac158d127843faac7d5e100ced00d0e6e"
 ECG_IMAGE_KIT_REVISION = "27b90f56896c9fc78b05a83ca14844ea2637aa0b"
 
 
